@@ -67,3 +67,7 @@ The `dna.py` program identifies to whom a sequence of DNA belongs by analyzing s
 #### Edge Cases:
 * The program assumes that the input DNA sequence and STRs are formatted correctly and does not perform error handling for invalid input formats.
 * The program assumes that the CSV file is well-formed, with no missing data or incorrect entries.
+
+## Credit
+
+This problem originates from [CS50's Introduction to Computer Science](https://cs50.harvard.edu/x/2024/psets/6/dna/) at Harvard University.
