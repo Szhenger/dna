@@ -6,7 +6,7 @@ DNA, the molecule that carries genetic information in all living organisms, has 
 
 In this problem, we are tasked with implementing a program that automates the DNA profiling process. Using a database of DNA sequences and short tandem repeats (STRs), your program will analyze an unknown DNA sample and identify which individual in the database it belongs to. This solution will help mimic real-world forensic techniques used to match genetic material to specific individuals.
 
-In a file called `dna.py` in a folder named `dna`, that takes a DNA sequence as input and determines to whom it belongs by comparing it against a database of STRs.
+Write a file called `dna.py` in a folder named `dna`, that takes a DNA sequence as input and determines to whom it belongs by comparing it against a database of STRs.
 
 ## Background
 
