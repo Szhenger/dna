@@ -32,4 +32,38 @@ In real-world applications, analysts can focus on specific regions of the DNA wh
 
 ## Specification
 
-TODO
+The `dna.py` program identifies to whom a sequence of DNA belongs by analyzing short tandem repeats (STRs) in a given DNA sequence and comparing them to a database of known individuals. The program works by reading a database of individuals' STR counts from a CSV file and comparing those counts to the longest runs of STRs found in the DNA sequence provided in a separate text file.
+
+#### Comand-Line Usage:
+* `python dna.py data.csv sequence.txt`
+* `data.csv`: A CSV file containing a database of individuals' STR counts. Each row corresponds to an individual, with columns representing the STR counts for different STR sequences.
+* `sequence.txt`: A text file containing the DNA sequence to be analyzed.
+
+#### Functionality:
+* Read and Parse the DNA Database:
+    * The program reads the CSV file containing the DNA database. Each row in the database contains the name of an individual and their STR counts. The CSV is read into a list of dictionaries, where each dictionary represents an individual and contains their name and STR counts.
+* Read the DNA Sequence:
+    * The program reads the provided DNA sequence from the sequence.txt file into a variable for processing.
+* Find Longest STR Match:
+    * The program analyzes the DNA sequence to find the longest consecutive repeat of each STR listed in the database.
+    * For each STR, the program computes the longest run of consecutive repeats in the sequence using the `longest_match` function.
+        * The `longest_match` function takes two arguments: the full DNA sequence and a specific STR subsequence. It returns the length of the longest consecutive run of that subsequence in the DNA sequence.
+* Compare STR Counts:
+    * Once the longest STR match has been determined for each STR, the program compares these values to the STR counts in the DNA database for each individual.
+    * If the STR counts for the DNA sequence match all STR counts for a particular individual, the program prints the name of that individual and exits.
+    * No Match Found: If the STR counts for the DNA sequence do not match any individual in the database.
+
+#### Key Functions:
+* `longest_match(sequence, subsequence)`:
+    * This function calculates the longest consecutive occurrence of a given STR (subsequence) within the DNA sequence (sequence). It returns the length of the longest run of the STR.
+* `main()`:
+    * The main function orchestrates the overall flow of the program. It reads the input files, computes the longest STR matches, compares them to the database, and prints the result (either the matching individual or "No match").
+
+#### Expected Behavior:
+* If an individual with matching STR counts is found in the database, their name is printed.
+* If no match is found, the program prints "No match."
+* If the wrong number of command-line arguments is provided, the program exits with a usage message.
+
+#### Edge Cases:
+* The program assumes that the input DNA sequence and STRs are formatted correctly and does not perform error handling for invalid input formats.
+* The program assumes that the CSV file is well-formed, with no missing data or incorrect entries.
