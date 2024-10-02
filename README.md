@@ -70,4 +70,4 @@ The `dna.py` program identifies to whom a sequence of DNA belongs by analyzing s
 
 ## Credit
 
-This problem originates from [CS50's Introduction to Computer Science](https://cs50.harvard.edu/x/2024/psets/6/dna/) at Harvard University.
+This problem originates from [CS50's Introduction to Computer Science](https://cs50.harvard.edu/x/2024/psets/6/dna/) at Harvard University and any solution here is explicitly for educational purposes only.
